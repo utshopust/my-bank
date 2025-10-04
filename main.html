@@ -19,7 +19,9 @@
         <nav class="flex justify-around items-center border-b-1 pb-2">
           <img class="w-16" src="assets/Group.png" alt="" />
           <div>
-            <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
+            <h1 class="text-3xl font-bold">
+              $ <span id="main-balance">4500</span>
+            </h1>
             <p class="border rounded p-1">Available Balance</p>
           </div>
           <button id="logout" class="btn">Logout</button>
@@ -32,11 +34,11 @@
           </p>
 
           <div class="cards mt-10 grid grid-cols-3 gap-2 p-2">
-            <div class="box cursor-pointer border p-4 text-center rounded-sm">
+            <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
               <h3>Add Money</h3>
             </div>
-            <div class="box cursor-pointer border p-4 text-center rounded-sm">
+            <div id="cash-out-box" class="box cursor-pointer border p-4 text-center rounded-sm">
               <img class="w-8 mx-auto" src="assets/send1.png" alt="" />
               <h3>CashOut</h3>
             </div>
@@ -58,8 +60,8 @@
             </div>
           </div>
           <!-- Add Money Section -->
-          <section>
-            <h2 class="text-2xl">Add Money</h2>
+          <section id="addmoney">
+            <h2 class="text-2xl font-bold">Add Money</h2>
             <div class="">
               <div class="hero-content flex-col lg:flex-row-reverse">
                 <div class="card w-full max-w-sm shrink-0 shadow-2xl">
@@ -84,7 +86,6 @@
                       />
                       <label class="label">Add Amount</label>
                       <input
-                       
                         id="amount"
                         type="number"
                         class="input border rounded-2xl"
@@ -102,7 +103,8 @@
                       />
                       <div><a class="link link-hover">Forgot password?</a></div>
 
-                      <button id="add-money"
+                      <button
+                        id="add-money"
                         class="btn btn-neutral mt-4 bg-blue-700 border-none rounded-2xl"
                       >
                         Add Money
@@ -114,9 +116,52 @@
             </div>
           </section>
         </section>
+        <!-- cashOut section start -->
+        <section id="cashout">
+          <h2 class="text-2xl font-bold">Cash Out</h2>
+          <fieldset class="fieldset">
+            <label class="label">Account Number</label>
+            <input
+              value="01725751991"
+              id="account-number"
+              type="number"
+              class="input border rounded-2xl"
+              placeholder="Your Account Number"
+              required
+            />
+            <label class="label">Add Amount</label>
+            <input
+              id="amount"
+              type="number"
+              class="input border rounded-2xl"
+              placeholder="Enter Your Amount"
+              required
+            />
+            <label class="label">4 Digit PIN</label>
+            <input
+              value="1234"
+              id="pin"
+              type="password"
+              class="input rounded-2xl"
+              placeholder="Your Pin"
+              required
+            />
+            <div><a class="link link-hover">Forgot password?</a></div>
+
+            <button
+              id="add-money"
+              class="btn btn-neutral mt-4 bg-red-700 border-none rounded-2xl"
+            >
+              Cash Out
+            </button>
+          </fieldset>
+        </section>
+        <!-- cashOut section end -->
       </header>
     </section>
+
     <script src="script/addMoney.js"></script>
     <script src="script/logout.js"></script>
+    <script src="script/toggle.js"></script>
   </body>
 </html>
