@@ -20,9 +20,14 @@
           <img class="w-16" src="assets/Group.png" alt="" />
           <div>
             <h1 class="text-3xl font-bold">
-              $ <span id="main-balance" class="overflow-scroll">4500</span>
+              $
+              <span
+                id="main-balance"
+                class="border text-white bg-orange-600 border-opacity-80 border-black rounded-md"
+                >4500</span
+              >
             </h1>
-            <p class="border rounded p-1">Available Balance</p>
+            <p class="border rounded p-1 text-center">Available Balance</p>
           </div>
           <button id="logout" class="btn">Logout</button>
         </nav>
@@ -76,7 +81,7 @@
                 <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                   <div class="card-body">
                     <legend>Select Bank</legend>
-                    <select class="select">
+                    <select id="allBank" class="select">
                       <option disabled selected>Select Bank</option>
                       <option value="Bkash">Bkash</option>
                       <option value="Nagad">Nagad</option>
@@ -110,7 +115,7 @@
                         placeholder="Your Pin"
                         required
                       />
-                      <div><a class="link link-hover">Forgot password?</a></div>
+                     
 
                       <button
                         id="add-money"
@@ -176,7 +181,7 @@
           <h1 class="text-3xl font-bold text-red-400 p-4 text-center">
             Transaction History
           </h1>
-          <div id="transaction-container" class="text-center font-bold "></div>
+          <div id="transaction-container" class="text-center font-bold"></div>
         </section>
         <!-- transaction history End  -->
       </header>
